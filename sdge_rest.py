@@ -11,7 +11,7 @@ app.debug = True
 app.store = datastore.DataStore()
 app.store.load("sdge.xml")
 
-@app.route('/api/1.0/year/<int:year>/')
+@app.route('/api/1.0/year/<int:year>')
 def year_data(year): 
     data = app.store.get_year(year) 
     return jsonify(data)
